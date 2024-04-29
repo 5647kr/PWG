@@ -54,9 +54,9 @@ input::-webkit-inner-spin-button {
   border: 10px solid #fff;
   border-radius: 45px;
   box-sizing: border-box;
-  min-height: 60px;
+  min-height: 62px;
   margin: 20px auto;
-  padding: 20px 10px;
+  padding: 10px 10px;
   text-align: center;
   font-size: 20px;
 }
@@ -136,14 +136,17 @@ label {
 .pwList {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 10px;
   height: 100%;
 }
+
 .pwList li {
   font-size: 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;;
+}
+
+.pwList li:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .pwList li button {
@@ -156,4 +159,16 @@ label {
   font-size: 12px;
   box-sizing: border-box;
   font-family: "nico-moji";
+}
+
+.pwList li .delBtn {
+  position: absolute;
+  right: 0;
+  top: -7px;
+}
+
+.pwList li .copyBtn {
+  position: absolute;
+  right: 80px;
+  top: -7px;
 }
